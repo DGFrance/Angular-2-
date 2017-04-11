@@ -1,0 +1,10 @@
+<div class="row">
+    <input #searchBox (keyup)="search(searchBox.value)" type="text" class="form-control" placeholder="Search books">
+</div>
+<div class="row" *ngIf="books" id="searchresultbox">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let book of books | async" (click)="detail(book)">
+            {{book.title}}
+        </li>
+    </ul>
+</div>

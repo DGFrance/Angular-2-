@@ -1,0 +1,27 @@
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"> </div>
+            <div class="col-md-8"> <input type="text" class="form-control" placeholder="Search books"> </div>
+        </div>
+    </div>
+</div>
+<div class="py-5">
+    <div class="container" *ngIf="book">
+        <div class="row">
+            <div class="col-md-7 align-self-center py-1">
+                <img [src]="bookUrl | safe" alt="Book Cover" width="80%">
+            </div>
+            <div class="col-md-5 py-1">
+                <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title">{{book.title}}</h4>
+                        <h6 class="card-subtitle text-muted">by {{book.author}}</h6>
+                        <p class="card-text p-y-1">
+                            {{book.longdesc}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
